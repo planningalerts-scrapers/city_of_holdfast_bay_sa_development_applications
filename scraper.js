@@ -66,6 +66,7 @@ async function main() {
 
     // Retrieve the first page.
 
+    console.log(`Retrieving page: ${DevelopmentApplicationsUrl}`);
     let body = await request(DevelopmentApplicationsUrl);
     let $ = cheerio.load(body);
 
