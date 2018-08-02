@@ -46,9 +46,9 @@ async function insertRow(database, developmentApplication) {
                 reject(error);
             } else {
                 if (this.changes > 0)
-                    console.log(`    Application \"${developmentApplication.applicationNumber}\" with address \"${developmentApplication.address}\" and reason \"${developmentApplication.reason}\" was inserted into the database.`);
+                    console.log(`    Inserted: Application \"${developmentApplication.applicationNumber}\" with address \"${developmentApplication.address}\" and reason \"${developmentApplication.reason}\" into the database.`);
                 else
-                    console.log(`    Application \"${developmentApplication.applicationNumber}\" with address \"${developmentApplication.address}\" and reason \"${developmentApplication.reason}\" was already present in the database.`);
+                    console.log(`     Skipped: Application \"${developmentApplication.applicationNumber}\" with address \"${developmentApplication.address}\" and reason \"${developmentApplication.reason}\" because it was already present in the database.`);
 
                 sqlStatement.finalize();  // releases any locks
                 resolve(row);
