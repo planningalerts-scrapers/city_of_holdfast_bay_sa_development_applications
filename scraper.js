@@ -112,7 +112,7 @@ async function main() {
             // Check that a valid development application number was provided.
 
             let applicationNumber = element.children[0].data.trim();
-            if (!/^[0-9][0-9][0-9]\/[0-9][0-9][0-9][0-9]\/[0-9][0-9]$/.test(applicationNumber))
+            if (!/^[0-9]{3}\/[0-9]{5}\/[0-9]{2}$/.test(applicationNumber))
                 continue;
 
             // Retrieve the page that contains the details of the development application.
